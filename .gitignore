@@ -1,0 +1,5 @@
+# IB Gateway files
+gateway/
+
+# Python
+__pycache__
