@@ -9,6 +9,8 @@ on:
     paths:
       - '**.py'
 
+  workflow_dispatch:
+
 jobs:
   flake8_py3:
     runs-on: ubuntu-latest
