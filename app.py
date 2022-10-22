@@ -1,4 +1,4 @@
-from ib.strategies.ira import rebalance_holdings
+from strategies.ira import rebalance_holdings
 
 
 def main():
