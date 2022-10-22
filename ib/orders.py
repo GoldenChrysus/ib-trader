@@ -1,6 +1,6 @@
-from .api.client import INSTANCE
+from .api.client import IBClient
 from typing import Dict
 
 
 def submit_orders(orders: list) -> Dict:
-    return INSTANCE.submit_orders(orders)
+    return IBClient().api.submit_orders(orders)
