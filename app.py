@@ -1,7 +1,7 @@
 from consts import CURRENCIES, TARGETS
 from ib.account import get_account_by_alias, get_cash, get_portfolio, use_account
 from ib.helpers import round_down
-from ib.inst.equity import get_id, get_price
+from ib.instruments.equity import get_id, get_price
 from ib.waiters.time import wait_until_time
 # from ib.orders import submit_orders
 

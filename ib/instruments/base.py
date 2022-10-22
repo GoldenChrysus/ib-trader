@@ -1,4 +1,4 @@
-from ib.api.client import INSTANCE
+from ..api.client import INSTANCE
 
 
 def get_price(symbol: str, id: int) -> float:

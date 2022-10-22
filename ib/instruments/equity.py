@@ -1,5 +1,5 @@
+from ..api.client import INSTANCE
 from .base import get_price as get_price_base
-from ib.api.client import INSTANCE
 
 
 def get_id(symbol: str) -> int:
