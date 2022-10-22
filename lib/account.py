@@ -1,6 +1,7 @@
 from .api.client import INSTANCE
 from typing import Dict
 
+
 def get_account_by_alias(alias: str) -> Dict:
     accounts = list(filter(lambda x: x['accountAlias'] == alias, INSTANCE.get_accounts()))
 

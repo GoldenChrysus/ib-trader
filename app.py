@@ -2,7 +2,7 @@ from consts import CURRENCIES, TARGETS
 from lib.account import get_account_by_alias, get_cash, get_portfolio, use_account
 from lib.helpers import round_down
 from lib.inst.equity import get_id, get_price
-from lib.orders import submit_orders
+# from lib.orders import submit_orders
 
 
 def testing():
