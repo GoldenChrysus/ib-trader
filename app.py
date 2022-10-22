@@ -1,19 +1,23 @@
 from consts import CURRENCIES, TARGETS
-from lib.account import get_account_by_alias, get_cash, get_portfolio, use_account
-from lib.helpers import round_down
-from lib.inst.equity import get_id, get_price
-# from lib.orders import submit_orders
+from ib.account import get_account_by_alias, get_cash, get_portfolio, use_account
+from ib.helpers import round_down
+from ib.inst.equity import get_id, get_price
+from ib.waiters.time import wait_until_time
+# from ib.orders import submit_orders
 
 
 def testing():
-    from lib.api.client import INSTANCE
-    import json
+    # from ib.api.client import INSTANCE
+    # import json
 
     # print(INSTANCE.get_conid('MUB', instrument_filters={'assetClass': 'STK'}, contract_filters={'isUS': True}))
-    print(json.dumps(INSTANCE.get_live_orders()))
+    # print(json.dumps(INSTANCE.get_live_orders()))
+    wait_until_time('09:30', 'America/New_York')
 
 
 def main():
+    wait_until_time('09:45', 'America/New_York')
+
     if not (account := get_account_by_alias('Traditional IRA')):
         raise RuntimeError('Account not found.')
 
