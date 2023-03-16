@@ -15,6 +15,8 @@ def wait_until_time(time: str, tz: str, include_weekends=False) -> None:
             days_to_add = 7 - test_weekday
             test = test + timedelta(days=days_to_add)
 
+    print('waiting until %s' % (test))
+
     while True:
         now = datetime.now(tz_obj)
 
